@@ -14,24 +14,38 @@ NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
+    "https://github.com/comfyanonymous/ComfyUI_TensorRT"
+    "https://github.com/crystian/ComfyUI-Crystools"
+    "https://github.com/yolain/ComfyUI-Easy-Use"
+    "https://github.com/cubiq/ComfyUI_InstantID"
+    "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
+    "https://github.com/Nuked88/ComfyUI-N-Sidebar"
+    "https://github.com/jags111/efficiency-nodes-comfyui"
+    "https://github.com/prodogape/Comfyui-Yolov8-JSON"
+    "https://github.com/rgthree/rgthree-comfy"
 )
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/SG161222/RealVisXL_V4.0/resolve/main/RealVisXL_V4.0.safetensors"
+    "https://huggingface.co/RunDiffusion/Juggernaut-X-Hyper/resolve/main/JuggernautXRundiffusion_Hyper.safetensors"
+    "https://huggingface.co/RunDiffusion/Juggernaut-X-v10/resolve/main/Juggernaut-X-RunDiffusion-NSFW.safetensors"
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/16576"
+    "https://civitai.com/api/download/models/430643"
 )
 
 VAE_MODELS=(
     "https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors"
 )
 
+VAE_APPROX_MODELS=(
+    "https://github.com/madebyollin/taesd/raw/main/taesdxl_decoder.pth"
+)
+
 ESRGAN_MODELS=(
-    "https://huggingface.co/ai-forever/Real-ESRGAN/resolve/main/RealESRGAN_x4.pth"
-    "https://huggingface.co/FacehugmanIII/4x_foolhardy_Remacri/resolve/main/4x_foolhardy_Remacri.pth"
-    "https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
+    "https://huggingface.co/vladmandic/sdnext-upscalers/resolve/main/HAT-Helaman-Nomos8kL-4x.pth"
+    "https://huggingface.co/vladmandic/sdnext-upscalers/resolve/main/SRFormer-Nomos-4x.pth"
 )
 
 CONTROLNET_MODELS=(
@@ -58,6 +72,9 @@ function provisioning_start() {
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/vae" \
         "${VAE_MODELS[@]}"
+    provisioning_get_models \
+        "${WORKSPACE}/storage/stable_diffusion/models/vae_approx" \
+        "${VAE_APPROX_MODELS[@]}"
     provisioning_get_models \
         "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
         "${ESRGAN_MODELS[@]}"
