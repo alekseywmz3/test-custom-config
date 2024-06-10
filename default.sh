@@ -27,12 +27,11 @@ NODES=(
 
 CHECKPOINT_MODELS=(
     "https://huggingface.co/SG161222/RealVisXL_V4.0/resolve/main/RealVisXL_V4.0.safetensors"
-    "https://huggingface.co/RunDiffusion/Juggernaut-X-Hyper/resolve/main/JuggernautXRundiffusion_Hyper.safetensors"
-    "https://huggingface.co/RunDiffusion/Juggernaut-X-v10/resolve/main/Juggernaut-X-RunDiffusion-NSFW.safetensors"
+    "https://civitai.com/api/download/models/343830?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=3b9155acdd3182e9e9837b962fc9982f"
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/430643"
+    "https://civitai.com/api/download/models/430643?type=Model&format=SafeTensor&token=3b9155acdd3182e9e9837b962fc9982f"
 )
 
 VAE_MODELS=(
@@ -45,7 +44,6 @@ VAE_APPROX_MODELS=(
 
 ESRGAN_MODELS=(
     "https://huggingface.co/vladmandic/sdnext-upscalers/resolve/main/HAT-Helaman-Nomos8kL-4x.pth"
-    "https://huggingface.co/vladmandic/sdnext-upscalers/resolve/main/SRFormer-Nomos-4x.pth"
 )
 
 CONTROLNET_MODELS=(
