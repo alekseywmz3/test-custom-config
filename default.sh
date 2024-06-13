@@ -12,26 +12,23 @@ PYTHON_PACKAGES=(
 
 NODES=(
     "https://github.com/ltdrdata/ComfyUI-Manager"
+    "https://github.com/zcfrank1st/Comfyui-Toolbox"
     "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
     "https://github.com/ltdrdata/ComfyUI-Inspire-Pack"
-    "https://github.com/comfyanonymous/ComfyUI_TensorRT"
     "https://github.com/crystian/ComfyUI-Crystools"
     "https://github.com/yolain/ComfyUI-Easy-Use"
     "https://github.com/cubiq/ComfyUI_InstantID"
     "https://github.com/cubiq/ComfyUI_IPAdapter_plus"
     "https://github.com/Nuked88/ComfyUI-N-Sidebar"
-    "https://github.com/jags111/efficiency-nodes-comfyui"
-    "https://github.com/prodogape/Comfyui-Yolov8-JSON"
     "https://github.com/rgthree/rgthree-comfy"
 )
 
 CHECKPOINT_MODELS=(
-    "https://huggingface.co/SG161222/RealVisXL_V4.0/resolve/main/RealVisXL_V4.0.safetensors"
-    "https://civitai.com/api/download/models/343830?type=Model&format=SafeTensor&size=pruned&fp=fp16&token=3b9155acdd3182e9e9837b962fc9982f"
+    "https://civitai.com/api/download/models/351306?type=Model&format=SafeTensor&size=full&fp=fp16&token=0b0c10415b47d26bdf2f27cd5e2e62c7"
+    "https://huggingface.co/stabilityai/stable-diffusion-3-medium/resolve/main/sd3_medium_incl_clips_t5xxlfp16.safetensorss"
 )
 
 LORA_MODELS=(
-    "https://civitai.com/api/download/models/430643?type=Model&format=SafeTensor&token=3b9155acdd3182e9e9837b962fc9982f"
 )
 
 VAE_MODELS=(
@@ -43,7 +40,6 @@ VAE_APPROX_MODELS=(
 )
 
 ESRGAN_MODELS=(
-    "https://huggingface.co/vladmandic/sdnext-upscalers/resolve/main/HAT-Helaman-Nomos8kL-4x.pth"
 )
 
 CONTROLNET_MODELS=(
