@@ -1,5 +1,7 @@
 #!/bin/bash
 
+CIVITAI_TOKEN="0b0c10415b47d26bdf2f27cd5e2e62c7"
+HG_TOKEN="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"
 # This file will be sourced in init.sh
 
 # https://raw.githubusercontent.com/ai-dock/comfyui/main/config/provisioning/default.sh
@@ -24,8 +26,8 @@ NODES=(
 )
 
 CHECKPOINT_MODELS=(
-    "https://civitai.com/api/download/models/351306?type=Model&format=SafeTensor&size=full&fp=fp16&token=0b0c10415b47d26bdf2f27cd5e2e62c7"
-    "https://huggingface.co/stabilityai/stable-diffusion-3-medium/resolve/main/sd3_medium_incl_clips_t5xxlfp16.safetensorss"
+    "https://huggingface.co/misri/zavychromaxl_v90/resolve/main/zavychromaxl_v90.safetensors"
+    "https://huggingface.co/SG161222/RealVisXL_V4.0/resolve/main/RealVisXL_V4.0.safetensors"
 )
 
 LORA_MODELS=(
@@ -40,6 +42,10 @@ VAE_APPROX_MODELS=(
 )
 
 ESRGAN_MODELS=(
+)
+
+UPSCALE_MODELS=(
+  "https://drive.usercontent.google.com/download?id=1JRwXYeuMBIsyeNfsTfeSs7gsHqCZD7xn&export=download&authuser=0&confirm=t&uuid=fa39c9af-8530-4855-b602-d4bfe8758e3d&at=APZUnTV0U_RV-lyXzIKQd5NwPFQU%3A1723930350832"
 )
 
 CONTROLNET_MODELS=(
@@ -70,8 +76,8 @@ function provisioning_start() {
         "${WORKSPACE}/storage/stable_diffusion/models/vae_approx" \
         "${VAE_APPROX_MODELS[@]}"
     provisioning_get_models \
-        "${WORKSPACE}/storage/stable_diffusion/models/esrgan" \
-        "${ESRGAN_MODELS[@]}"
+        "${WORKSPACE}/storage/stable_diffusion/models/upscale_models" \
+        "${UPSCALE_MODELS[@]}"
     provisioning_print_end
 }
 
